@@ -5,7 +5,7 @@ public abstract class Shape {
   protected String color;
   protected boolean filled;
 
-  // Constructor (overloaded)
+  // Constructors (overloaded)
   public Shape() {}
   public Shape(String c, boolean f) {
     color = c;
@@ -19,14 +19,17 @@ public abstract class Shape {
   public boolean isFilled() {
     return this.filled;
   }
-  public void setColor(String c) {
-    this.color = c;
+
+  public void setColor(String color) {
+    this.color = color;
   }
-  public void setFilled(boolean f) {
-    this.filled = f;
+  public void setFilled(boolean filled) {
+    this.filled = filled;
   }
 
   public abstract double getArea();
   public abstract double getPerimeter();
+
+  @Override
   public abstract String toString();
 }
